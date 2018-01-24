@@ -36,3 +36,9 @@ function Addition(nb1, nb2) {
 }
 
 document.write("<p>" + Addition(10, 5) + "</p>");
+
+/* -----------------------------------------------------------------------
+    EXERCICE :
+    Créez une fonction permettant d'effectuer l'addition de deux nombres
+    passés en paramètre.
+------------------------------------------------------------------------- */

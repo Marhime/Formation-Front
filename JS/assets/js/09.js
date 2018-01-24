@@ -39,3 +39,9 @@ while(j < Prenoms.length){
     document.write('<p>Instruction executée : <strong>' + Prenoms[j] + '</strong></p>')
     j++;
 }
+document.write('<hr>');
+
+// -- La Boucle ForEach
+// -- ATTENTION A LA PERFORMANCE !!!
+
+Prenoms.forEach()

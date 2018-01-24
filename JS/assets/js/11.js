@@ -26,9 +26,8 @@ let contact = BaseDeDonnees[i];
     //-- l(contact) 
 if((emailUser === contact.email) && (mdpUser === contact.mdp)){
     w("Bienvenue " + contact.prenom + " " + contact.nom + " !");
-    break;
-}
 }
 else{
     alert('ATTENTION, email/mot de passe incorrect.')
+}
 }
