@@ -57,7 +57,7 @@ if(verifierAge(age)) {
     document.write('0_0 !!!');
 }
 else {
-    // -- 4b. J'effectue une redirectionù
+    // -- 4b. J'effectue une redirection
     document.location.href = "http://fr.lmgtfy.com/?q=Majorit%C3%A9+L%C3%A9gale+en+France";
 }
 
