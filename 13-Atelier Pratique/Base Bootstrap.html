@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <!-- Encodage de la page pour les accents -->
+    <meta charset="UTF-8">
+    
+    <!-- Titre de la page -->
+    <title>Atelier Responsive</title>
+    
+    <!-- Pour Internet Explorer : S'assurer qu'il utilise la dernière version du moteur de rendu -->
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    
+    <!-- Affichage sans zoom sur les mobiles -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    
+    <!-- Styles CSS -->
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <link href="assets/css/main.css" rel="stylesheet">
+    
+    
+    <!-- HTML 5 Shiv -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" integrity="sha256-3Jy/GbSLrg0o9y5Z5n1uw0qxZECH7C6OQpVBgNFYa0g=" crossorigin="anonymous"></script>
+
+
+    
+</head>
+<body>
+    
+    <nav class="navbar navbar-inverse">
+        <div class="container">      
+          <!-- Collect the nav links, forms, and other content for toggling -->
+
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navigation" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+            <!-- Le Logo Apple -->
+            <a class="navbar-brand"  href="#">
+                <i class="fab fa-apple" aria-hidden="true"></i>
+            </a>
+            <div class="collapse navbar-collapse" id="navigation">
+              <ul class="nav navbar-nav">
+                <li><a href="#">Mac</a></li>
+                <li><a href="#">iPad</a></li>
+                <li><a href="#">iPhone</a></li>
+                <li><a href="#">Watch</a></li>
+                <li><a href="#">TV</a></li>
+                <li><a href="#">Music</a></li>
+                <li><a href="#">Assistance</a></li>
+                <li><a href="#"><i class="fas fa-search"></i></a></li>
+                <li><a href="#"><i class="fas fa-shopping-bag"></i></a></li>
+              </ul>
+          </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+      </nav>
+      <main>
+        <!-- Les Produits -->
+        <section id="mobile">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <ul class="list-inline">
+                            <li><a href="#"><img src="assets/img/menu/iPhone7.png" alt="iPhone7"></a></li>
+                            <li><a href="#"><img src="assets/img/menu/iPhone6s.png" alt="iPhone6s"></a></li>
+                            <li><a href="#"><img src="assets/img/menu/iPhoneSE.png" alt="iPhoneSE"></a></li>
+                            <li><a href="#"><img src="assets/img/menu/iOs10.png" alt="iOS10"></a></li>
+                            <li><a href="#"><img src="assets/img/menu/Accessoires.png" alt="Accessoires"></a></li>
+                            <li><a href="#"><img src="assets/img/menu/Comparer.png" alt="Comparer"></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+          <section id="Numero7">
+            <div class="container-full">
+              <h1>iPhone</h1>
+              <h2>Numéro 7</h2>              
+              <a href="#">En savoir plus >></a>
+              <a href="#">Acheter >></a>
+              <p>Ou rendez-vous dès aujourd'hui dans un Apple Store.</p>
+
+            </div>
+            <div class="container-full">
+            </div>
+          </section>
+
+                  <!-- iPhone7 -->
+        <section id="iPhone7">            
+            <div class="container">
+                <div class="row">
+                    <aside class="col-sm-6">
+                        <img class="img-responsive" src="assets/img/iPhone.png" alt="iPhone">
+                    </aside>
+                    <article class="col-sm-6">
+                        <h3>Passez à l’iPhone 7.</h3>
+                        <p>Échangez votre smartphone contre un iPhone <br>
+                        neuf dans un Apple Store et bénéficiez de <br> mensualités réduites.</p>
+                   <a class="btn btn-primary" href="#">Comment ça marche ? ></a>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <!--  <section id="iPhone7">
+            <div class="container">
+              <div class="col-xs-6 col-md-6 col-lg-2 col-lg-offset-2">
+                <img class="img-responsive" src="assets/img/iPhone.png">
+              </div>
+              <div class="col-xs-6 col-md-6 col-lg-2 col-lg-offset-2 center">
+                <h2>Passez à l'iPhone 7.</h2>
+                <p>Échangez votre smartphone contre un iPhone<br>
+                neuf dans un Apple Store et bénéficiez de<br>
+                mensualités réduites.</p>
+                <a href="#">Comment ça marche ? ></a>
+              </div>
+            </div>
+          </section> -->
+
+                      <!-- Début du Formulaire -->
+                    <section id="formulaire">
+                      <div class="container">
+                          <form id="contact" action="traitement.php" class="form-horizontal">
+                              <fieldset>
+                                  
+                                  <!-- Nom du Formulaire -->
+                                  <h1>Contact</h1>
+                                  
+                                  <!-- Nom et Prénom -->
+                                  <div class="form-group">
+                                      <div class="col-md-8 col-md-offset-2">
+                                          <input type="text" name="nom" id="nom" class="form-control" placeholder="Nom et Prénom">
+                                      </div>
+                                  </div>
+                                  
+                                  <!-- Email & Téléphone -->
+                                    <div class="form-group row">
+                                        <div class="col-md-5 col-md-offset-2">
+                                            <input type="email" name="email" id="email" class="form-control" placeholder="Email">
+                                        </div>
+                                        <div class="col-md-3">
+                                            <input type="tel" name="tel" id="tel" class="form-control" placeholder="Téléphone">
+                                        </div>
+                                    </div>
+
+                                  <!-- Sujet -->
+                                  <div class="form-group">
+                                      <div class="col-md-8 col-md-offset-2">
+                                          <input type="text" name="sujet" id="sujet" class="form-control" placeholder="Sujet">
+                                      </div>
+                                  </div>
+
+                                  <!-- Message -->
+                                  <div class="form-group">
+                                      <div class="col-md-8 col-md-offset-2">
+                                          <textarea class="form-control" rows="7" placeholder="Message"></textarea>
+                                      </div>
+                                  </div>
+                                  <!-- Bouton d'Envoi -->
+                                  <div class="form-group">
+                                      <div class="col-md-8 col-md-offset-5 col-xs-2 col-xs-offset-4">
+                                          <button type="submit" class="btn btn-primary" value="Envoyer ma Demande">Envoyer ma Demande</button>
+                                      </div>
+                                  </div>
+                                  
+                              </fieldset>
+                          </form>
+                      </div>
+                    </section>
+      </main>
+
+    <footer class="footer">
+      <p>Réalisation 2018 - Maxime Joyes</p>
+    </footer>
+    
+    
+    
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
