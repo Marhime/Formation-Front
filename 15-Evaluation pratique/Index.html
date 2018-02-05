@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <!-- Encodage de la page pour les accents -->
+    <meta charset="UTF-8">
+    
+    <!-- Titre de la page -->
+    <title>OhMyCats !</title>
+    
+    <!-- Pour Internet Explorer : S'assurer qu'il utilise la dernière version du moteur de rendu -->
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    
+    <!-- Affichage sans zoom sur les mobiles -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    
+    <!-- Styles CSS -->
+    <link href="assets/css/styles.css" rel="stylesheet">
+    
+    <!-- HTML 5 Shiv -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" integrity="sha256-3Jy/GbSLrg0o9y5Z5n1uw0qxZECH7C6OQpVBgNFYa0g=" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+    
+    <!-- Début du Header -->
+    <header class="container-fluid header">
+        <div class="container">
+                <h1 class="logo">OhMyCats !</h1>
+        </div>
+    <!-- Fin du Header -->
+    </header>
+
+    <!-- Début de la bannière -->
+    <section class="container-fluid banner">
+            <h2>Adoptez un chat trop bon !</h2>
+    <!-- Fin de la bannière -->
+    </section>
+
+    <!-- Début du adopt a cat -->
+    <section class="container-fluid adoptACat">
+        <div class="container">
+            <div class="row">
+                <aside class="col-md-3 col-sm-12">
+                    <form class="form-horizontal" id="formulaire">
+                        <!-- Nom du formulaire -->
+                        <h3>Les chats à adopter</h3>
+
+                        <fieldset>
+
+                            <!-- Selectionnez un chat -->
+                            <div class="form-group">
+                            <label class="col-md-6 control-label" for="select">Choix du chat :</label>
+                            <div class="col-md-12">
+                                <select id="select" name="select" class="form-control">
+                                <option value="0">-- Sélectionnez --</option>
+                                <option value="1">Sushi</option>
+                                <option value="2">Maki</option>
+                                <option value="3">Sashimi</option>
+                                <option value="4">Yakitori</option>
+                                <option value="5">Onigri</option>
+                                </select>
+                            </div>
+                            </div>
+                            
+                            <!-- Raison d'adoption-->
+                            <div class="form-group">
+                            <label class="col-md-8 control-label" for="message">Raison d'adoption :</label>  
+                            <div class="col-md-12">
+                            <textarea class="form-control" id="message" placeholder="Saisissez ici les raisons pour lesquelles vous souhaitez adopter ce chat..." rows="10"></textarea>
+                                
+                            </div>
+                            </div>
+                            <!-- Bouton envoyer -->
+                            <div class="form-group">
+                                <div class="col-md-12">
+                                    <button id="submit" name="submit" class="btn btn-success btn-block">Envoyer</button>
+                                </div>
+                            </div>
+                    
+                        </fieldset>
+                    </form>
+                </aside>
+                <figure class="col-md-9 col-sm-12 carousel">
+                        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                            <!-- Indicators -->
+                            <ol class="carousel-indicators">
+                                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                                <li data-target="#myCarousel" data-slide-to="1"></li>
+                                <li data-target="#myCarousel" data-slide-to="2"></li>
+                                <li data-target="#myCarousel" data-slide-to="3"></li>
+                                <li data-target="#myCarousel" data-slide-to="4"></li>
+                            </ol>
+                            
+                            <!-- Wrapper for slides -->
+                            <div class="carousel-inner">
+                                <div class="item active">
+                                    <img src="assets/img/chat_1.jpg" alt="Sushi">
+                                    <div class="carousel-caption">
+                                        <p>Sushi</p>
+                                    </div>
+                                </div>
+                            
+                                <div class="item">
+                                    <img src="assets/img/chat_2.jpg" alt="Maki">
+                                    <div class="carousel-caption">
+                                        <p>Maki</p>
+                                    </div>
+                                </div>
+                            
+                                <div class="item">
+                                    <img src="assets/img/chat_3.jpg" alt="Sashimi">
+                                    <div class="carousel-caption">
+                                        <p>Sashimi</p>
+                                    </div>
+                                </div>
+
+                                <div class="item">
+                                    <img src="assets/img/chat_4.jpg" alt="Yakitori">
+                                    <div class="carousel-caption">
+                                        <p>Yakitori</p>
+                                    </div>
+                                </div>
+
+                                <div class="item">
+                                    <img src="assets/img/chat_5.jpg" alt="Onigri">
+                                    <div class="carousel-caption">
+                                        <p>Onigri</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Left and right controls -->
+                            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                                <span class="glyphicon glyphicon-chevron-left"></span>
+                                <span class="sr-only">Précédent</span>
+                            </a>
+                            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                                <span class="glyphicon glyphicon-chevron-right"></span>
+                                <span class="sr-only">Suivant</span>
+                            </a>
+                            </div>
+                </figure>
+            </div>
+        </div>
+
+    <!-- Fin du adopt a cat -->
+    </section>
+
+    <!-- Début du prefooter -->
+    <section class="container-fluid prefooter">
+        <div class="container">
+            <div class="row">
+                <article class="col-md-9 col-sm-12 speech">
+                    <h2>Nos chats à adopter...</h2>
+                    <p>Sed quid est quod in hac causa maxime homines admirentur et reprehendant meum consilium, cum ego idem antea multa decreverim, que magis ad hominis dignitatem quam ad rei publicae necessitatem pertinerent? Supplicationem quindecim dierum decrevi sententia mea. Rei publicae satis erat tot dierum quot C. Mario ; dis immortalibus non erat exigua eadem gratulatio quae ex maximis bellis. Ergo ille cumulus dierum hominis est dignitati tributus.</p>
+                    <p>Haec igitur prima lex amicitiae sanciatur, ut ab amicis honesta petamus, amicorum causa honesta faciamus, ne exspectemus quidem, dum rogemur; studium semper adsit, cunctatio absit; consilium vero dare audeamus libere. Plurimum in amicitia amicorum bene suadentium valeat auctoritas, eaque et adhibeatur ad monendum non modo aperte sed etiam acriter, si res postulabit, et adhibitae pareatur.</p>
+                </article>
+                <img src="assets/img/tete-chat.png" class="img-responsive col-md-3 col-sm-12 cat">
+            </div>
+        </div>
+
+    <!-- Fin du prefooter -->
+    </section>
+
+    <!-- Début du footer -->
+    <footer class="container-fluid footer">
+        <p>© OhMyCats</p>
+
+    <!-- Fin du footer -->
+    </footer>
+    
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <!-- Mon JS -->
+    <script src="assets/js/js.js"></script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

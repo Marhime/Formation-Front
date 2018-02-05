@@ -1,0 +1,137 @@
+/* Import Police */
+@import url('https://fonts.googleapis.com/css?family=Merienda');
+
+/* Couleurs : 
+	navbar : #061339
+    premier bloc : #B9CDFF + background
+    titre h1 : #FFF
+    autres titres : #2F4073
+	footer : #061339
+    tête chat défaut : #7885A5
+    tête chat hover : #061339
+*/
+
+
+/* Défaut */
+h1, h2, h3{
+    font-family: 'Merienda', cursive;
+}
+
+p{
+    margin: 0;
+}
+
+
+body, html {
+    padding: 0;
+    margin: 0;
+}
+
+.container-fluid {
+    padding: 0;
+    margin: 0;
+}
+
+/* Header */
+.header {
+    background-color: #061339;
+}
+
+.logo {
+    font-size: 150%;
+    color: #fff;
+    margin: 0;
+    padding: 15px 0 15px 0;
+}
+
+/* Banniere */
+.banner{
+    background-image: url('../img/background.jpg');
+    background-color: #B9CDFF;
+    padding: 60px 0 60px 0;
+}
+
+.banner h2{
+    color: #fff;
+    text-shadow: 1px 1px 10px #000;
+    text-align: center;
+}
+
+/* AdoptACat */
+.adoptACat{
+    padding: 50px 0 60px 0;
+    background-color: #F1F1F1;
+}
+
+/* Formulaire */
+#formulaire h3{
+    color: #2F4073;
+    text-align: center;
+}
+
+.form-horizontal .control-label{
+    text-align: left;
+}
+
+/* Pour empêcher de resize horizontalement */
+textarea {
+    resize: vertical;
+}
+
+fieldset{
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 0 10px 0 10px;
+    background-color: #F5F5F5;
+}
+
+/* Pre footer */
+.prefooter{
+    background-color: #DDDDDD;
+}
+
+.prefooter:hover .cat{
+    background-color: #061339;
+    padding: 0;
+}
+
+.speech h2{
+    color: #2F4073;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.speech p{
+    padding-top: 10px;
+}
+
+.cat{
+    background-color: #7885A5;
+    padding: 0;
+    margin-top: 10px;
+}
+
+/* footer */
+.footer{
+    background-color: #061339;
+}
+
+.footer p{
+    color: #fff;
+    padding: 10px 10px 10px 0px;
+    float: right;
+}
+
+
+/* Optimisation mobile */
+@media screen and (max-width: 768px) {
+    .adoptACat { 
+    display: flex;
+    flex-direction: row-reverse;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    }
+    .carousel{
+    margin-top: 30px;
+    }
+}
