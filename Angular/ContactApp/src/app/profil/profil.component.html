@@ -1,0 +1,12 @@
+<div class="jumbotron" *ngIf="contact">
+  <h2>
+    {{ contact.name }}
+    <small>({{ contact.username }})</small>
+  </h2>
+
+</div>
+
+  <div class="jumbotron" *ngIf="!contact">
+    <span class="glyphicon glyphicon-arrow-left"></span>
+    <h2>Bienvenue, choisis un contact !</h2>
+  </div>

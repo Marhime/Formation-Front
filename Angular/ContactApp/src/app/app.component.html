@@ -33,8 +33,7 @@
     </nav>
   </header>
   <div class="row">
-    <div class="col-sm-4">
-      <div>
+    <div class="col-sm-3">
         <ul class="list-group">
           <li *ngFor="let contact of mesContacts"
               (click)="choisirContact(contact)"
@@ -43,21 +42,10 @@
             {{ contact.name }}
           </li>
         </ul>
-      </div>
+      <app-form (unContactEstCree)="ajouterContactDansListe($event)"></app-form>
     </div>
-    <div class="col-sm-8">
-      <div class="jumbotron" *ngIf="contactActif">
-        <h2>
-          {{ contactActif.name }}
-          <small>({{ contactActif.username }})</small>
-        </h2>
-      </div>
-    </div>
-    <div class="col-sm-8">
-      <div class="jumbotron" *ngIf="!contactActif">
-        <span class="glyphicon glyphicon-arrow-left"></span>
-        <h2>Bienvenue, choisis un contact !</h2>
-      </div>
+    <div class="col-sm-9">
+      <app-profil [contact]="contactActif"></app-profil>
     </div>
   </div>
   <footer class="text-center">

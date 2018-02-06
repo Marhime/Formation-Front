@@ -4,8 +4,10 @@
  * via @angular/core
  */
 
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import { Contact } from './shared/models/contact';
+import {UserApiService} from './shared/services/user-api.service';
+import {UserStorageService} from './shared/services/user-storage.service';
 
 /**
  * @Component est ce qu'on appelle un décorateur.
@@ -42,7 +44,11 @@ import { Contact } from './shared/models/contact';
  * correspond au ViewModel.
  */
 
-export class AppComponent {
+export class AppComponent implements OnInit {
+
+  constructor(private userApiService: UserApiService,
+              private userStorageService: UserStorageService) {}
+
   // -- Déclaration du Variable titre
   title: string = 'Gestionnaire de Contacts';
 
@@ -57,7 +63,9 @@ export class AppComponent {
     email     : 'maxime.joyes@gmail.com',
   };
 
-  mesContacts: Contact[] = [
+  mesContacts: Contact[] = [];
+
+  /* mesContacts: Contact[] = [
     {
       id        : 1,
       name      : 'Maxime JOYES',
@@ -88,7 +96,15 @@ export class AppComponent {
       username  : 'lilou',
       email     : 'lea.joyes@gmail.com'
     }
-  ];
+  ]; */
+
+  ngOnInit(): void {
+    this.userApiService.getContacts().subscribe(
+      contacts => {
+        this.mesContacts = contacts;
+      }
+    );
+  }
 
   /**
    * Ma fonction choisir contact, prend un contact
@@ -98,6 +114,14 @@ export class AppComponent {
 
   choisirContact(contactCliqueParMonUtilisateur) {
     this.contactActif = contactCliqueParMonUtilisateur;
+  }
+
+  ajouterContactDansListe(event) {
+    const leContact = event.leContact;
+    let id: number = this.mesContacts.length;
+    leContact.id = id += 1;
+    this.mesContacts.push(leContact);
+    this.userStorageService.save(this.mesContacts);
   }
 
 }
