@@ -1,0 +1,49 @@
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+<div class="container">
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">TodoListApp</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end" id="navbarTogglerDemo02">
+        <app-add-task (newTaskEvent)="newTask($event)"></app-add-task>
+      </div>
+    </nav>
+  </header>
+  <div class="row m-0">
+    <div class="col">
+      <div class="todolist not-done">
+        <h1>To do</h1>
+        <hr>
+        <ul id="sortable" class="list-unstyled">
+          <li class="ui-state-default"
+          *ngFor="let task of tasks | taskFilter : false">
+            <div class="checkbox">
+              <label>
+                <input (click)="taskDone(task)" type="checkbox" value="" />{{ task.titre }}
+              </label>
+            </div>
+          </li>
+        </ul>
+        <div class="todo-footer bg-dark text-white">
+          <strong><span class="count-todos"></span></strong> Nombre de tâches restantes : {{ tasks.length }}.
+        </div>
+      </div>
+    </div>
+    <div class="col todo-right">
+      <div class="todolist">
+        <h1>Done</h1>
+        <ul id="done-items" class="list-unstyled">
+          <li>
+            Some item
+            <button type="button" class="close" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
