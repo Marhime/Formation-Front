@@ -1,0 +1,35 @@
+#conteneur{
+    margin: 0 auto;
+    width: 1300px;
+    box-shadow: 1px 1px 6px;
+    text-align: center;
+}
+
+header{
+    background: #02b5ce;
+    padding: 10px;
+}
+
+header h1, header img{
+    display: inline;
+}
+
+nav, footer{
+    height: 20px;
+    background: #4d4d4d;
+    color: #fff;
+}
+
+nav a{
+    color: #fff;
+    text-decoration: none;
+    margin: 0 20px;
+}
+
+section{
+    padding: 20px;
+}
+
+img{
+    width: 300px;
+}
