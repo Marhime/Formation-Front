@@ -17,9 +17,9 @@
     <title>Document</title>
 </head>
 <body>
-    <a href="fruit.php?cerises">Cerises</a>
-    <a href="fruit.php?bananes">Bananes</a>
-    <a href="fruit.php?pommes">Pommes</a>
-    <a href="fruit.php?oranges">Oranges</a>
+    <a href="fruit.php?fruit=cerises">Cerises</a>
+    <a href="fruit.php?fruit=bananes">Bananes</a>
+    <a href="fruit.php?fruit=pommes">Pommes</a>
+    <a href="fruit.php?fruit=oranges">Oranges</a>
 </body>
 </html>

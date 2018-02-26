@@ -15,7 +15,7 @@
 	<div class="login-page">
 		<div class="form">
             <form class="login-form" method="post" action="formulaire4.php"> <!-- method : comment vont circuler les données, action : URL de destination -->
-            <h1>Inscription</h1>
+            <h1>Pick a fruit</h1>
 			<input type="text" id="pseudo" name="pseudo" placeholder="Pseudo"/>
 			<input type="email" id="email" name="email" placeholder="Email"/>
 			<input class="button" type="submit" value="Connexion">

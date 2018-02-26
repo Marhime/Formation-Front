@@ -450,7 +450,7 @@ $liste = array("Maxime","John","Andrei","Elodie");
 echo $liste; // /!\ Attention erreur, on ne peut pas afficher les données d'un tableau avec une instruction d'affichage classique
 echo '<pre>'; var_dump($liste); echo '</pre>';
 echo '<pre>'; print_r($liste); echo '</pre>';
-// var_dump et print_r sont des instructions d'affichage améliorées. pre est une balise HTML permettant de formater me texte, cela nous permet de mettre en forme la sortie du print_r
+// var_dump et print_r sont des instructions d'affichage améliorées. pre est une balise HTML permettant de formater le texte, cela nous permet de mettre en forme la sortie du print_r
 // contexte : lorsqu'on récupère des informations en BDD, nous les retrouverons sous forme d'ARRAY
 
 // -----------------------------
@@ -505,7 +505,7 @@ $tab_multi = array(
 
 echo '<pre>'; print_r($tab_multi); echo '</pre>';
 
-// Exercice : tenter de sortir "Amadieu" en passant par les tableaux ARRAY et sans faire de echo "Amadieu
+// Exercice : tenter de sortir "Amadieu" en passant par les tableaux ARRAY et sans faire de echo "Amadieu"
 
 echo $tab_multi[1]["nom"];
 echo '<hr>';
@@ -520,3 +520,23 @@ foreach($tab_multi as $indice1 => $tableau)
     }
     echo '<hr>';
 }
+
+echo '<h2>Classe et objet</h2>';
+// un objet est un autre type de donnée. Un peu à la manière d'un ARRAY, il permet de regrouper des inforamtions.
+// cependant cela va beaucoup plus loin car on pezut y déclarer des variables (propriétés, attributs) mais aussi des fonctions (méthodes)
+
+class Etudiant
+{
+    public $prenom  = "Maxime"; // public permet de préciser que l'élément sera visible partout (il y  a aussi protected et private)
+    public $age     = 24; // déclaration d'une propriété public
+    public function pays() // déclaration d'une fonction public
+    {
+        return "France";
+    }
+}
+
+$objet = new Etudiant(); // new est un mot clé permettant d'instancier la classe et d'en faire un objet. c'est ce qui nous permet de le deployer afin que l'on puisse s'en servir. On se sert de ce qui est dans la classe via l'objet
+echo '<pre>'; var_dump($objet); echo '</pre>'; echo '<br>';
+echo $objet->prenom . '<br>'; // nous pouvons piocher dans un ARRAY avec les crochets, nous devons piocher dans un OBJET avec une fleche
+echo $objet->age . '<br>';
+echo $objet->pays() . '<br>'; // appel d'une méthode toujours avec une parenthèse
