@@ -24,7 +24,7 @@
   padding: 0;
   margin: 0 0 15px;
 }
-.form input, .form textarea {
+.form input {
   font-family: "Roboto", sans-serif;
   outline: 0;
   background: #f2f2f2;
@@ -35,27 +35,41 @@
   box-sizing: border-box;
   font-size: 14px;
 }
-.form .select {
-  font-family: "Roboto", sans-serif;
-  outline: 0;
-  background: #f2f2f2;
-  width: 100%;
-  border: 0;
-  margin: 0 0 15px;
-  padding: 15px;
-  box-sizing: border-box;
-  font-size: 14px;
+.message1 {
+    font-family: "Roboto", sans-serif;
+    outline: 0;
+    background: #f2f2f2;
+    width: 100%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
 }
-.form option {
-  font-family: "Roboto", sans-serif;
-  outline: 0;
-  background: #f2f2f2;
-  width: 100%;
-  border: 0;
-  margin: 0 0 15px;
-  padding: 15px;
-  box-sizing: border-box;
-  font-size: 14px;
+.message {
+    font-family: "Roboto", sans-serif;
+    outline: 0;
+    background: #f2f2f2;
+    width: 100%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+.pseudow{
+    float: left;
+    margin-bottom: 5px;
+    color: #4CAF50;;
+}
+.heure {
+    float: right;
+    margin-top: 2px;
+    color: #76b852;
+}
+.contenu {
+    margin-top: 40px;
+    text-align: left;
 }
 .form .button {
   font-family: "Roboto", sans-serif;

@@ -73,8 +73,80 @@ while($contenu = $resultat->fetch(PDO::FETCH_ASSOC)) // pour chaque tour de bouc
 // votre requete ne doit sortir qu'un seul et unique résultat ? : pas de boucle
 // votre requête ne sort qu'un seul résultat et peu potentiellement en sortir plusieurs ? : UNE BOUCLE !!! 
 
-echo '<h2>04. PDO : QUERY - FETCHALL + FETCH_ASSOC</h2>';
+echo '<h2>05. PDO : QUERY - FETCHALL + FETCH_ASSOC</h2>';
 $resultat = $pdo->query("SELECT * FROM employes");
 $donnees = $resultat->fetchALL(PDO::FETCH_ASSOC);
-// echo '<pre>'; print_r($donnees); echo '</pre>';
+echo '<pre>'; print_r($donnees); echo '</pre>';
 // Exercice : afficher successivement les données de tous les employés à l'aide de boucle
+foreach($donnees as $indice => $array)
+{
+    foreach($array as $info => $valeur)
+    {
+        echo "$info : <strong>$valeur</strong><br>";
+    }
+    echo '<hr>';
+}
+
+echo '<h2>06. PDO : QUERY - FETCH + BDD</h2>';
+// Exercice : afficher la liste des bases de données, puis la mettre dans une liste ul li
+$resultat = $pdo->query("SHOW DATABASES");
+echo '<ul> Base de données :<hr>';
+while($bdd = $resultat->fetch(PDO::FETCH_ASSOC))
+{
+    foreach($bdd as $array => $valeur)
+    {
+        echo "<li>$valeur</li>";
+    }
+}
+echo '</ul>';
+
+echo '<h2>07. PDO : QUERY - TABLE</h2>';
+$resultat = $pdo->query("SELECT * FROM employes");
+
+echo '<table border=20><tr>';
+for($i = 0; $i < $resultat->columnCount(); $i++) // columnCount() est une méthode issu de la classe PDOStatement qui retourne le nombre de champs/colonnes de la table, tant qu'il y a des colonnes, on boucle
+{
+    $colonne = $resultat->getColumnMeta($i); // getColumnMeta() est une méhtode issu de la class PDOStatement qui récolte les informations des champs/colonnes de la table, pour chaque tour de boucle, $ colonne contient un tableau ARRAY avec les infos d'une colonne
+    echo '<pre>'; print_r($colonne); echo '</pre>';
+    echo '<td><strong>' . $colonne['name'] . '</strong></td>'; // on va crocheter à l'indice 'name' pour afficher le nom des colonnes
+}
+echo '</tr>';
+while($ligne = $resultat->fetch(PDO::FETCH_ASSOC)) // on associe la méthode fetch() au résultat, $ligne contient un tableau ARRAY avec les informations d'un employé à chaque tour de boucle
+    {
+        echo '<tr>'; // on crée une nouvelle ligne du tableau pour chaque employé
+        foreach($ligne as $informations) // passe en revu le tableau ARRAY D4UN EMPLOY2
+    {
+        echo "<td>$informations</td>"; // on affichge successivement les valeurs dans des cellules !
+    }
+    echo '</tr>';
+    }
+echo '</table>';
+// on peut associer 2 fois la même méthode sur le même résultat, on ne peux pas associer 2 fetch(PDO::FETCH_ASSOC) sur le même résultat
+
+
+echo '<h2>08. PDO : PREPARE + BINDVALUE + EXECUTE</h2>';
+
+$nom = "JOYES";
+$resultat = $pdo->prepare('SELECT * FROM employes WHERE nom = :nom');
+// Préparation de la requête :
+// Soulage le serveur et la BDD à l'éxecution, previens pour les injections SQL et les failles XSS
+// ':nom' est un marqueur nominatif, on prépare la requête mais on ne l'éxecute pas 
+
+echo '<pre>'; print_r($resultat); echo '</pre>';
+echo '<pre>'; print_r(get_class_methods($resultat)); echo '</pre>';
+
+$resultat->bindValue(':nom', $nom, PDO::PARAM_STR); // bindValue() est une méthode permettant d'associer une valeur au marqueur ':nom' . nom du marqueur/valeur du marqueur/type de données  
+
+$resultat->execute();// execution de la requête
+// on formule la requête une seule fois à tout moment dans le script nous pouvons l'éxécuter
+
+$donnees = $resultat->fetch(PDO::FETCH_ASSOC); // une fois exécuté, on associe une méthode pour rendre le résultat exploitable
+echo '<pre>'; print_r($donnees); echo '</pre>';
+
+// --------------------------------------------------------- 
+$resultat->bindValue(':nom', 'Amadieu', PDO::PARAM_STR); // on associe une nouvelle valeur au marqueur
+
+$resultat->execute(); // on éxecute la requête
+
+$donnees = $resultat->fetch(PDO::FETCH_ASSOC); // une fois exécuté, on associe une méthode pour rendre le résultat exploitable
+echo '<pre>'; print_r($donnees); echo '</pre>';

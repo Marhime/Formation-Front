@@ -24,29 +24,7 @@
   padding: 0;
   margin: 0 0 15px;
 }
-.form input, .form textarea {
-  font-family: "Roboto", sans-serif;
-  outline: 0;
-  background: #f2f2f2;
-  width: 100%;
-  border: 0;
-  margin: 0 0 15px;
-  padding: 15px;
-  box-sizing: border-box;
-  font-size: 14px;
-}
-.form .select {
-  font-family: "Roboto", sans-serif;
-  outline: 0;
-  background: #f2f2f2;
-  width: 100%;
-  border: 0;
-  margin: 0 0 15px;
-  padding: 15px;
-  box-sizing: border-box;
-  font-size: 14px;
-}
-.form option {
+.form input, .form textarea, .selected-style select, .selected-style option{
   font-family: "Roboto", sans-serif;
   outline: 0;
   background: #f2f2f2;

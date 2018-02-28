@@ -47,7 +47,7 @@ foreach($tab_fruits as $fruit)
 }
 echo '</tr>';
 }
-echo '</tab>';
+echo '</table>';
 
 echo '<br><br><br>';
 echo "<table border =1><tr>"; // µµµµµµµµµµµµµµµµµµµµµµµµµµµ     TABLEAU IMPORTANT A CONNAITRE
